@@ -1,2 +1,11 @@
 <h1>this is article page </h1>
 <p>Welcome</p>
+<h2>Articles</h2>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title %>
+    </li>
+  <% end %>
+</ul>
