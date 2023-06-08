@@ -18,7 +18,13 @@
 
   <p>
     <strong>Comment:</strong>
-    <%= comment.body %>
+    <%= comment.commenter %>
+  </p>
+  <p>
+     <%= link_to "Destroy comment",[comment.article,comment], data:{
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+      } %>
   </p>
 <% end %>
 
@@ -29,10 +35,15 @@
     <%= form.text_field :commenter %>
   </p>
   <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
+    <%= form.label :Comment %><br>
+    <%= form.text_area :Comment %>
   </p>
+<br>
+</ul>
+
   <p>
     <%= form.submit %>
+
+
   </p>
 <% end %>

@@ -46,7 +46,7 @@ class ArticlesController < ApplicationController
 
 
     else
-      ender :edit, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 
