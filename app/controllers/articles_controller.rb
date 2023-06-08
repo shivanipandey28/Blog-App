@@ -5,10 +5,10 @@ class ArticlesController < ApplicationController
 
   end
 
-    def show
+  def show
 
       @article = Article.find(params[:id])
-    end
+  end
 
   def edit
     @article = Article.find(params[:id])
